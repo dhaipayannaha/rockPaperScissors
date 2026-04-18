@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="icon" type="image/png" href="./images/rock.png">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="glass-container" id="playField">
+        <h1 class="title">ROCK PAPER SCISSORS</h1>
+        
+        <div class="scoreboard">
+            <div class="score-card">
+                <div class="score-label">You</div>
+                <div class="score-value" id="myScore">0</div>
+            </div>
+            <div class="score-card">
+                <div class="score-label">PC</div>
+                <div class="score-value" id="computerScore">0</div>
+            </div>
+        </div>
+
+        <div class="arena">
+            <div class="player-area" id="you">
+                <h3 class="area-title">Your Choice</h3>
+                <div class="icon-circle">
+                    <img id="myShow" src="./images/no.png" alt="Your Choice">
+                </div>
+                <div class="choice-text" id="myPress">Waiting...</div>
+            </div>
+
+            <div class="vs-text">VS</div>
+
+            <div class="player-area" id="pc">
+                <h3 class="area-title">PC Choice</h3>
+                <div class="icon-circle">
+                    <img id="computerShow" src="./images/no.png" alt="Computer Choice">
+                </div>
+                <div class="choice-text" id="computerPress">Waiting...</div>
+            </div>
+        </div>
+
+        <div class="outcome-message hidden" id="outcomeMessage">
+            Choose your weapon!
+        </div>
+
+        <div class="controls">
+            <button class="control-btn" onclick="playTurn('rock')" id="btn-rock">
+                <img src="images/rock.png" alt="Rock">
+                <span>Rock</span>
+            </button>
+            <button class="control-btn" onclick="playTurn('paper')" id="btn-paper">
+                <img src="images/paper.png" alt="Paper">
+                <span>Paper</span>
+            </button>
+            <button class="control-btn" onclick="playTurn('scissors')" id="btn-scissors">
+                <img src="images/scissor.png" alt="Scissors">
+                <span>Scissors</span>
+            </button>
+        </div>
+
+        <button class="reset-btn reset">Restart Game</button>
+    </div>
+
+    <div class="glass-container hidden" id="scoreBoard">
+        <h1 class="title">Match Result</h1>
+        <div class="result-image-container">
+            <img id="resultImg" src="./images/win.png" alt="Result">
+        </div>
+        
+        <div class="final-scores">
+            <p>Your Score: <span id="lastScore">0</span></p>
+            <p>Computer Score: <span id="lastComputerScore">0</span></p>
+        </div>
+
+        <button class="reset-btn reset">Play Again</button>
+    </div>
+
+    <script src="./game.js"></script>
+    <div class="creator-tag">
+        <img src="./images/Dhaipayan-logo.png" alt="Dhaipayan Logo" class="creator-logo">
+        <span>Created by Dhaipayan Naha</span>
+    </div>
+</body>
+
+</html>
